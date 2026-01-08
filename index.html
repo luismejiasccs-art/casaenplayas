@@ -20,8 +20,7 @@
             scroll-behavior: smooth;
         }
         .hero-bg {
-            /* Imagen cambiada a tu foto personal 'playa2.jpg' */
-            /* Asegúrate de que el archivo de imagen esté en la misma carpeta que este archivo HTML */
+            /* IMPORTANTE: Esta línea busca la foto 'playa2.jpg' en la misma carpeta */
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('playa2.jpg');
             background-size: cover;
             background-position: center;
@@ -197,7 +196,8 @@
                 </div>
 
                 <!-- Botón para descargar el PDF -->
-                <a href="LA%20CASA%20EN%20PLAYAS.pdf" download="LA CASA EN PLAYAS.pdf" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+                <!-- IMPORTANTE: Guarda tu archivo PDF con el nombre "Folleto-Casa-Playas.pdf" en la misma carpeta -->
+                <a href="Folleto-Casa-Playas.pdf" download="Folleto-Casa-Playas.pdf" target="_blank" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
                     <i class="fa-solid fa-file-pdf mr-2 text-xl"></i> Ver Detalles Completos (PDF)
                 </a>
                 <p class="text-sm text-gray-500 mt-2">Descarga el folleto informativo de la casa</p>
@@ -311,6 +311,13 @@
                             <div>
                                 <strong class="text-gray-800">Basura:</strong>
                                 <p class="text-sm text-gray-600">Debe estar embolsada. Recolección Sáb/Dom/Fer.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-door-open text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Puerta a la Playa:</strong>
+                                <p class="text-sm text-gray-600">Horario de apertura de 07:00 AM a 19:00 PM.</p>
                             </div>
                         </li>
                     </ul>
