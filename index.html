@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa en Playas | Alquiler Vacacional Exclusivo</title>
+    
+    <!-- Tailwind CSS para diseño moderno y rápido -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome para los íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            /* Imagen cambiada a tu foto personal 'playa2.jpg' */
+            /* Asegúrate de que el archivo de imagen esté en la misma carpeta que este archivo HTML */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('playa2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-blue-600"><i class="fa-solid fa-umbrella-beach mr-2"></i>Casa en Playas</span>
+                </div>
+                <!-- Menú Escritorio -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-600 hover:text-blue-600 transition">Inicio</a>
+                    <a href="#comodidades" class="text-gray-600 hover:text-blue-600 transition">La Casa</a>
+                    <a href="#ubicacion" class="text-gray-600 hover:text-blue-600 transition">Ubicación</a>
+                    <a href="#normas" class="text-gray-600 hover:text-blue-600 transition">Normas</a>
+                    <a href="https://wa.me/593979382682?text=Hola,%20me%20interesa%20reservar%20en%20Casa%20en%20Playas" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition">
+                        Reservar Ahora
+                    </a>
+                </div>
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#inicio" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">Inicio</a>
+            <a href="#comodidades" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">La Casa</a>
+            <a href="#ubicacion" class="block py-3 px-4 text-gray-600 hover:bg-gray-100">Ubicación</a>
+            <a href="https://wa.me/593979382682?text=Hola,%20me%20interesa%20reservar%20en%20Casa%20en%20Playas" class="block py-3 px-4 text-blue-600 font-bold hover:bg-gray-100">Reservar por WhatsApp</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 drop-shadow-lg">Tu Refugio Exclusivo en Arenas del Pacífico</h1>
+            <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Capacidad para 16 personas. Seguridad 24/7. El confort que tu grupo merece.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/593979382682?text=Hola,%20quisiera%20saber%20disponibilidad%20y%20precios%20de%20Casa%20en%20Playas." target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full transition text-lg shadow-lg">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> Consultar Disponibilidad
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Principales (Resumen) -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12">¿Por qué elegir Casa en Playas?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-6 border rounded-xl hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition">
+                        <i class="fa-solid fa-bed text-2xl text-blue-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">4 Habitaciones</h3>
+                    <p class="text-gray-600">Habitaciones normales y espaciosas, diseñadas para el descanso total.</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="p-6 border rounded-xl hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition">
+                        <i class="fa-solid fa-bath text-2xl text-blue-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Privacidad Total</h3>
+                    <p class="text-gray-600">Cada habitación cuenta con su propio <strong>baño completo</strong> privado.</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="p-6 border rounded-xl hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition">
+                        <i class="fa-solid fa-users text-2xl text-blue-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hasta 16 Personas</h3>
+                    <p class="text-gray-600">Ideal para familias grandes o grupos de amigos. ¡Nadie se queda fuera!</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="p-6 border rounded-xl hover:shadow-xl transition group">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-600 transition">
+                        <i class="fa-solid fa-snowflake text-2xl text-blue-600 group-hover:text-white transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">A/C en Cada Habitación</h3>
+                    <p class="text-gray-600">Aire acondicionado independiente en todas las habitaciones para dormir fresco.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalle de la Casa (Sin Galería - Diseño Informativo) -->
+    <section id="comodidades" class="py-16 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Comodidad y Espacio</h2>
+                <p class="text-lg text-gray-600 mb-10">
+                    Nuestra casa está pensada para evitar las típicas incomodidades de los viajes en grupo. Aquí no harás fila para el baño ni sufrirás calor. Todo está listo para que llegues y descanses.
+                </p>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-sm mb-10">
+                    <ul class="grid md:grid-cols-2 gap-x-8 gap-y-6 text-left">
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-shield-halved text-green-600"></i>
+                            </div>
+                            Urbanización Cerrada y Segura
+                        </li>
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-user-shield text-green-600"></i>
+                            </div>
+                            Guardianía Privada 24/7
+                        </li>
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-car text-green-600"></i>
+                            </div>
+                            Parqueo Cerrado (3 Carros)
+                        </li>
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-fire-burner text-green-600"></i>
+                            </div>
+                            Área de BBQ / Parrilla
+                        </li>
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-kitchen-set text-green-600"></i>
+                            </div>
+                            Cocina Totalmente Equipada
+                        </li>
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-bed text-green-600"></i>
+                            </div>
+                            4 Habitaciones Confortables
+                        </li>
+                        <li class="flex items-center text-gray-700 text-lg p-2 hover:bg-gray-50 rounded transition">
+                            <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <i class="fa-solid fa-shower text-green-600"></i>
+                            </div>
+                            4 Baños Completos (Uno por cuarto)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Botón para descargar el PDF -->
+                <a href="LA%20CASA%20EN%20PLAYAS.pdf" download="LA CASA EN PLAYAS.pdf" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+                    <i class="fa-solid fa-file-pdf mr-2 text-xl"></i> Ver Detalles Completos (PDF)
+                </a>
+                <p class="text-sm text-gray-500 mt-2">Descarga el folleto informativo de la casa</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación y Normas (Actualizado con Normativa de la Urbanización) -->
+    <section id="normas" class="py-16 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            
+            <div class="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-lg shadow-sm mb-12" id="ubicacion">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4"><i class="fa-solid fa-map-location-dot mr-2"></i> Ubicación Privilegiada</h3>
+                <p class="text-gray-700 mb-6">
+                    Nos encontramos en la <strong>Urbanización Arenas del Pacífico</strong>, vía a Data. Disfruta de la tranquilidad lejos del ruido, pero cerca del mar, en un entorno seguro y exclusivo.
+                </p>
+                <a href="https://www.google.com/maps/place/Urb.+Arenas+del+Pac%C3%ADfico,+Data+de+Villamil/@-2.699753,-80.3278764,440m/data=!3m1!1e3!4m6!3m5!1s0x903269aa0a0639bb:0x48f72f1b44927a68!8m2!3d-2.6995932!4d-80.3258368!16s%2Fg%2F11bvtd463j?authuser=1&entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="inline-flex items-center bg-white text-blue-600 border border-blue-600 hover:bg-blue-50 font-bold py-2 px-6 rounded-lg transition">
+                    <i class="fa-solid fa-map mr-2"></i> Ver ubicación exacta en Google Maps
+                </a>
+            </div>
+
+            <!-- Grid de Políticas y Normas -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Columna 1: Políticas de Reserva (Dinero) -->
+                <div class="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-yellow-800 mb-4 border-b border-yellow-200 pb-2"><i class="fa-solid fa-file-invoice-dollar mr-2"></i> Reservas y Cancelación</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-yellow-600 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Reserva:</strong>
+                                <p class="text-sm text-gray-600">Se requiere el abono del <strong>50% del valor total</strong> para bloquear la fecha.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-clock text-yellow-600 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Cancelaciones:</strong>
+                                <p class="text-sm text-gray-600">Hasta 72 horas antes del ingreso: devolución del 50% de la reserva.</p>
+                                <p class="text-xs text-red-500 mt-1">Pasado ese tiempo, NO se realizará ningún reintegro.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-hand-holding-dollar text-yellow-600 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Daños:</strong>
+                                <p class="text-sm text-gray-600">El huésped es responsable económicamente de cualquier daño a la propiedad o áreas sociales durante su estadía.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 2: Reglas de la Casa (Estrictas) -->
+                <div class="bg-red-50 border border-red-200 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-red-700 mb-4 border-b border-red-200 pb-2"><i class="fa-solid fa-triangle-exclamation mr-2"></i> Reglas Estrictas</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-ban text-red-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Capacidad Máxima:</strong>
+                                <p class="text-sm text-gray-600">Límite estricto de 16 personas. Si se sobrepasa la capacidad, <strong>se solicitará el desalojo inmediato</strong> de la propiedad.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-ban text-red-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">No Mascotas:</strong>
+                                <p class="text-sm text-gray-600">Sin excepciones, para garantizar la higiene.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-ban text-red-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">No Fumar:</strong>
+                                <p class="text-sm text-gray-600">Prohibido fumar dentro de las habitaciones.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Normativa Urbanización -->
+                <div class="bg-gray-50 border border-gray-200 rounded-xl p-6">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4 border-b border-gray-300 pb-2"><i class="fa-solid fa-building mr-2"></i> Normativa "Arenas del Pacífico"</h3>
+                    <p class="text-xs text-gray-500 mb-3">El incumplimiento del reglamento de la urbanización es causal de sanción.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-car text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Velocidad Máxima:</strong>
+                                <p class="text-sm text-gray-600">15 km/h dentro de la urbanización.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-volume-low text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Ruido:</strong>
+                                <p class="text-sm text-gray-600">Respetar el descanso de los vecinos (volumen moderado).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-person-swimming text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Piscina:</strong>
+                                <p class="text-sm text-gray-600">Solo NIÑOS hasta 11 años bajo supervisión adulta.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <i class="fa-solid fa-trash text-blue-500 mt-1 mr-3"></i>
+                            <div>
+                                <strong class="text-gray-800">Basura:</strong>
+                                <p class="text-sm text-gray-600">Debe estar embolsada. Recolección Sáb/Dom/Fer.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Casa en Playas</h2>
+            <p class="text-gray-400 mb-8">Tu mejor opción para grupos grandes en Vía a Data.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
+                <a href="https://wa.me/593979382682" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                    <i class="fa-brands fa-whatsapp mr-2 text-xl"></i> +593 979 382 682
+                </a>
+                
+                <a href="https://www.instagram.com/casaenplayas" target="_blank" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-lg transition flex items-center">
+                    <i class="fa-brands fa-instagram mr-2 text-xl"></i> @casaenplayas
+                </a>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-sm text-gray-500">
+                &copy; 2024 Casa en Playas. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/593979382682?text=Hola,%20quisiera%20más%20información%20sobre%20Casa%20en%20Playas." class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Script para menú móvil -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú al hacer click en un enlace
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
